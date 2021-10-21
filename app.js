@@ -28,7 +28,15 @@ const fs = require('fs');
       {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project. (Required)'
+        message: 'Provide a description of the project. (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+              return true;
+            } else {
+              console.log('Please provide a description of the project.');
+              return false;
+            }
+          }
       },
       {
         type: 'checkbox',
@@ -39,12 +47,28 @@ const fs = require('fs');
       {
         type: 'input',
         name: 'installation',
-        message: 'Provide installation instructions of the project. (Required)'
+        message: 'Provide installation instructions of the project. (Required)',
+        validate: installationInput => {
+            if (installationInput) {
+              return true;
+            } else {
+              console.log('Please provide installation instructions of the project.');
+              return false;
+            }
+          }
       },
       {
         type: 'input',
         name: 'usage',
-        message: 'Provide the usage information of the project. (Required)'
+        message: 'Provide the usage information of the project. (Required)',
+        validate: usageInput => {
+            if (usageInput) {
+              return true;
+            } else {
+              console.log('Please provide usage information of the project.');
+              return false;
+            }
+          }
       },
       {
         type: 'checkbox',
@@ -55,18 +79,46 @@ const fs = require('fs');
       {
         type: 'input',
         name: 'contributor',
-        message: 'Provide the contributor to the project. (Required)'
+        message: 'Provide the contributor to the project. (Required)',
+        validate: contributorInput => {
+            if (contributorInput) {
+              return true;
+            } else {
+              console.log('Please provide the contributor of the project.');
+              return false;
+            }
+          }
       },
       {
         type: 'input',
         name: 'link',
-        message: 'Enter the GitHub link for the contributor to the project. (Required)'
+        message: 'Enter the GitHub link for the contributor to the project. (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+              return true;
+            } else {
+              console.log('Please provide the GitHub link for the contributor to the project.');
+              return false;
+            }
+          }
       },
       {
         type: 'confirm',
-        name: 'contributors',
-        message: 'Would you like to add another contributor to this project?',
-        default: false
+        name: 'addContributor',
+        message: 'Would you like to add another contributor to the project?',
+        default: true
+      },
+      {
+        type: 'input',
+        name: 'anotherContributor',
+        message: 'Provide the name of another contributor to the project.',
+        when: ({ addContributor }) => addContributor
+      },
+      {
+        type: 'input',
+        name: 'anotherGithub',
+        message: 'Provide GitHub link for the added contributor to the project.',
+        when: ({ addContributor }) => addContributor
       },
       {
         type: 'input',
@@ -74,20 +126,30 @@ const fs = require('fs');
         message: 'If there were tests performed, include that information here.'
       },
       {
-        type: 'confirm',
-        name: 'questions',
-        message: 'Are you available to answer questions about this project?',
-        default: false
-      },
-      {
         type: 'input',
         name: 'link',
-        message: 'Enter your GitHub link to be added into the Questions Section of the project. (Required)'
+        message: 'Enter your GitHub link to be added into the Questions Section of the project. (Required)',
+        validate: linkInput => {
+            if (linkInput) {
+              return true;
+            } else {
+              console.log('Please provide your GitHub link.');
+              return false;
+            }
+          }
       },
       {
         type: 'input',
         name: 'email',
-        message: 'Enter your emails address to be added into the Questions Section of the project. (Required)'
+        message: 'Enter your email address to be added into the Questions Section of the project. (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please provide your email address.');
+              return false;
+            }
+          }
       }
     ])
   };
