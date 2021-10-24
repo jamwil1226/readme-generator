@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jamwil1226/readme-generator#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "inquirer": "^8.2.0"
   }
 }
