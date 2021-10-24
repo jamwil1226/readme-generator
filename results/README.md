@@ -31,7 +31,7 @@ Jamie Williams
 GitHub: [@jamwil1226](https://github.com/jamwil1226/)
 
 ## Addtional Contributors
-add additional Contributor here
+add another contributor here
 
 GitHub: [@example](https://github.com/example/)
 
