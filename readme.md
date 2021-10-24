@@ -25,7 +25,7 @@ To use this app, clone this repository and run index.js on the command-line to s
  After pressing enter to begin, you will be given Mardown Tips to help you style your Readme according to your preference. 
  ![Mardown Tips](./images/markdown-tips-image.png)
 
- 
+
  Once you review the tips, hit enter to start answering the questions that will generate your Readme. 
  ![Questions](./images/questions-image.png)
 
