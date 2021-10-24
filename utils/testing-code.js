@@ -1,7 +1,7 @@
 // function to generate markdown for README
 const generateMarkdown = (data) => {
 
-    //License badges
+    //License badges - THIS SWITCH/CASE IS NOT WORKING AND I'M NOT SURE WHY!!
     switch (data.license) {
         case 'MIT':
             licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;

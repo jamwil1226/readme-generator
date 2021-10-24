@@ -1,8 +1,6 @@
 // function to generate markdown for README
 const generateMarkdown = (data) => {
-
    
-  
     //Table of contents
     let tableOfContents = `\n## Table of Contents\n`
     if (data.installation) { tableOfContents += `* [Installation](#installation)\n`; }
